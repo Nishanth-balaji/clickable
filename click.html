@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click button</title>
+    <style>
+        *{
+            background-color: rgb(116, 27, 249);
+        }
+        p{
+            text-align: center;
+            margin-top: 100px;
+            font-size: xx-large;
+            color: rgb(231, 10, 10);
+            font-weight: 400;
+            box-shadow: 5px black ;
+        }
+        h1{
+            text-align: center;
+            margin-top: 80px;
+            font-size: xx-large;
+        }
+        #clickbtn{
+            
+            height: 50px;
+            width: 100px;
+         position: absolute;
+         transition: width 2s ,linear;
+         left: 37%;
+         border-radius: 10px;
+        }
+        #clickbtn:hover{
+           background-color: rgb(8, 121, 233);
+        }
+        div{
+            background-color: deeppink;
+            width: 1200px;
+            height: 600px;
+            border: 5px solid;
+            border-radius: 30px;
+            text-align: center;
+        }
+        #counter{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>CLICK COUNTER</h1>
+    <p>Clicks: <span id="counter">0</span></p>
+    <button id="clickbtn">click me</button>
+    </div>
+    <script>
+        let count=0;
+        const counterelement=document.getElementById("counter");
+        const button=document.getElementById("clickbtn");
+        button.addEventListener("click",function(){
+            count++;
+            counterelement.textContent=count;
+        } );
+    </script>
+    
+    
+</body>
+</html>
